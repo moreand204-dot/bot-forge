@@ -1,0 +1,3 @@
+package com.lordescanor.botforge;
+import android.content.*; import org.json.*; import java.util.*;
+public class BotStore { private final SharedPreferences p; public BotStore(Context c){p=c.getSharedPreferences("bots",0);} public void add(BotProject b){try{JSONArray a=new JSONArray(p.getString("items","[]"));JSONObject o=new JSONObject();o.put("name",b.name);o.put("number",b.number);o.put("zip",b.zipPath);a.put(o);p.edit().putString("items",a.toString()).apply();}catch(Exception ignored){}} public JSONArray all(){try{return new JSONArray(p.getString("items","[]"));}catch(Exception e){return new JSONArray();}} public void clear(){p.edit().remove("items").apply();} }

@@ -1,0 +1,11 @@
+AIDE compatibility update applied:
+
+- Material Components downgraded to 1.2.1
+- AppCompat downgraded to 1.2.0
+- ConstraintLayout downgraded to 2.0.4
+- Activity downgraded to 1.2.4
+- Fragment downgraded to 1.2.5
+- RecyclerView downgraded to 1.1.0
+- SavedState pinned to 1.0.0
+
+If AIDE still shows old Material resource errors, close AIDE completely, reopen the project, then Clean/Rebuild. The errors were coming from the newer Material 1.5.0 resources, not from your app XML files.
